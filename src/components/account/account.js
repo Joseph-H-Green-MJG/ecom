@@ -12,13 +12,13 @@ class Account extends Component {
 
         const navbarLinks = [
             {
-                id: 0,
+                _id: 0,
                 title: 'Purchase History',
                 active: false,
                 component: <PurchaseHistory/>
             },
             {
-                id: 1,
+                _id: 1,
                 title: 'Account Information',
                 active: true,
                 component: <AccountInformation/>
@@ -32,7 +32,7 @@ class Account extends Component {
     renderContent() {
         let jsx
         if(this.props.navbarLinks) {
-            this.props.navbarLinks.map(link => {
+            this.props.navbarLinks.forEach(link => {
                 if(link.active) {
                     jsx = link.component
                 }
