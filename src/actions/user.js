@@ -32,7 +32,7 @@ export function fetchUserPurchases() {
                 orderDate: new Date().toDateString(),
                 creditCard: '-0000',
                 user: {
-                    name: 'Jordan Hudgens',
+                    name: 'Misty Ra',
                     shippingAddress: '7568 North Main Street'
                 }
             },
