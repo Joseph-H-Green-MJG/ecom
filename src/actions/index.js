@@ -12,8 +12,9 @@ import {
 import {
     fetchShopCategories,
     fetchShopProducts,
-    filterProductsWithCategoryId
-} from './shop'
+    filterProductsWithCategoryId,
+    filterProductsWithQuery
+} from './shop';
 
 export {
     setHeaderLinks,
@@ -25,5 +26,7 @@ export {
 
     fetchShopCategories,
     fetchShopProducts,
-    filterProductsWithCategoryId
+    filterProductsWithCategoryId,
+
+    filterProductsWithQuery
 };
