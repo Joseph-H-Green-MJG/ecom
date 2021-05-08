@@ -37,8 +37,8 @@ class Shop extends Component {
 
         return (
             <div className='shop'>
-                <ShopSearchBar onSubmit={this.onSubmit} className='shop__shop-search-bar' />
-                <div className='shop_products'>
+                <ShopSearchBar onSubmit={this.onSubmit} className='shop__search-bar' />
+                <div className='shop__products'>
                     {
                         this.props.filteredProducts.map(product => {
                             return (
