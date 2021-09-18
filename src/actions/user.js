@@ -1,8 +1,8 @@
-import Quantity from '../components/quantity';
-import {
+import { 
     SET_USER_PURCHASES,
     SET_PURCHASE_DETAIL,
-    SET_CART_PRODUCTS
+    SET_CART_PRODUCTS,
+    ADD_CART_PRODUCT
 } from './types';
 
 export function setPurchaseDetail(_id) {
@@ -12,15 +12,23 @@ export function setPurchaseDetail(_id) {
     })
 }
 
+export function addCartProduct(product) {
+    return ({
+        type: ADD_CART_PRODUCT,
+        payload: product
+    })
+}
+
 export function fetchCartProducts() {
     return ({
         type: SET_CART_PRODUCTS,
         payload: [
-            {   _id: 0,
+            {
+                _id: 0,
                 product: {
                     _id: 0,
-                    title: 'Javascript in the Browser',
-                    description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+                    title: 'JavaScript in the Browser',
+                    description: 'The FitnessGram™ Pacer Test is a multistage aerobic capacity test that progressively gets more difficult as it continues. The 20 meter pacer test will begin in 30 seconds. ... The running speed starts slowly, but gets faster each minute after you hear this signal.',
                     price: 1.99,
                     belongsTo: [0, 1]
                 },
@@ -31,12 +39,12 @@ export function fetchCartProducts() {
                 product: {
                     _id: 1,
                     title: 'Graph Database',
-                    description:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+                    description: 'The FitnessGram™ Pacer Test is a multistage aerobic capacity test that progressively gets more difficult as it continues. The 20 meter pacer test will begin in 30 seconds. ... The running speed starts slowly, but gets faster each minute after you hear this signal.',
                     price: 1.99,
                     belongsTo: [0, 6]
                 },
                 quantity: 1
-            }
+            },
         ]
     })
 }
@@ -48,7 +56,7 @@ export function fetchUserPurchases() {
             {
                 _id: 0,
                 total: 19.40,
-                orderNumber: 'D652196841654',
+                orderNumber: 'A0048248343',
                 orderDate: new Date().toDateString(),
                 creditCard: '-0000',
                 user: {
@@ -58,81 +66,82 @@ export function fetchUserPurchases() {
             },
             {
                 _id: 1,
-                total: 56.30,
-                orderNumber: 'B438167529426',
+                total: 1.30,
+                orderNumber: '24343sdfkjh72',
                 orderDate: new Date().toDateString(),
                 creditCard: '-0000',
                 user: {
-                    name: 'Misty Ra',
-                    shippingAddress: '7568 North Main Street'
+                    name: 'Maxwell Nelson',
+                    shippingAddress: '1337 West State Street'
                 }
             },
             {
                 _id: 2,
-                total: 75.10,
-                orderNumber: 'Y423761824692',
+                total: 1.30,
+                orderNumber: 'B0048248343',
                 orderDate: new Date().toDateString(),
                 creditCard: '-0000',
                 user: {
-                    name: 'Arron Gallegos',
-                    shippingAddress: '6381 South Redwood Street'
+                    name: 'Jordan Hudgens',
+                    shippingAddress: '1234 West State Street'
                 }
             },
             {
                 _id: 3,
-                total: 10.60,
-                orderNumber: 'E824520370619',
+                total: 16.40,
+                orderNumber: 'ADFasdlfkjwe',
                 orderDate: new Date().toDateString(),
                 creditCard: '-0000',
                 user: {
-                    name: 'Conner Gallegos',
-                    shippingAddress: '4385 East Briar Street'
+                    name: 'Max Asher Nelson',
+                    shippingAddress: '1234 West State Street'
                 }
             },
             {
                 _id: 4,
-                total: 46.80,
-                orderNumber: 'U703405680912',
+                total: 19.40,
+                orderNumber: 'A0048248343',
                 orderDate: new Date().toDateString(),
                 creditCard: '-0000',
                 user: {
-                    name: 'Isaac Gallegos',
-                    shippingAddress: '4785 East Camino Street'
+                    name: 'Jordan Hudgens',
+                    shippingAddress: '1234 West State Street'
                 }
             },
             {
                 _id: 5,
-                total: 76.43,
-                orderNumber: 'R435012047984',
+                total: 19.40,
+                orderNumber: 'A0048248343',
                 orderDate: new Date().toDateString(),
                 creditCard: '-0000',
                 user: {
-                    name: 'Hunter Green',
-                    shippingAddress: '6350 North Clinton Street'
+                    name: 'Jordan Hudgens',
+                    shippingAddress: '1234 West State Street'
                 }
             },
             {
                 _id: 6,
-                total: 80.46,
-                orderNumber: 'K564123798520',
+                total: 19.40,
+                orderNumber: 'A0048248343',
                 orderDate: new Date().toDateString(),
                 creditCard: '-0000',
                 user: {
-                    name: 'June Johnson',
-                    shippingAddress: '8604 West Jesus Street'
+                    name: 'Jordan Hudgens',
+                    shippingAddress: '1234 West State Street'
                 }
             },
             {
                 _id: 7,
-                total: 60.12,
-                orderNumber: 'A462035798612',
+                total: 3.20,
+                orderNumber: '5UFISHDFJASUSHI298',
                 orderDate: new Date().toDateString(),
                 creditCard: '-0000',
                 user: {
-                    name: 'William Green',
-                    shippingAddress: '5601 North Aithest Street'
+                    name: 'Andrew Wold',
+                    shippingAddress: '348 Yo State Street'
                 }
             },
+          
         ]
     })
 }
