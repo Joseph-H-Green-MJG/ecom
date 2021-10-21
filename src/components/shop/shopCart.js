@@ -70,7 +70,6 @@ class ShopCart extends Component {
 
 function mapStateToProps(state) {
     const { cartProducts } = state.user;
-    console.log(cartProducts)
     return {
         cartProducts
     }
